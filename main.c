@@ -28,18 +28,20 @@ int main() {
 		printf("Bakiye negatif olamaz!");
 		exit(0);
 	}
-	printf("Almak istediginiz arabayi seciniz. B-H-T-C(Cikis)");
-	fflush(stdin);
-	scanf("%c",&secim);
 	
 	
-	switch (secim)
+	do
+	{
+		printf("Almak istediginiz arabayi seciniz. B-H-T-C(Cikis)\n");
+		fflush(stdin);
+		scanf("%c",&secim);
+		switch (secim)
 		{
 	case 'B':
 		if(bakiye >= 1000){
-			kalan = bakiye - 1000;
+			bakiye = bakiye - 1000;
 			printf("BMW hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 			break;
 		}else{
 			printf("Yetersiz bakiye! ");
@@ -47,59 +49,62 @@ int main() {
 		break;
 	case 'b':
 		if(bakiye >= 1000){
-			kalan = bakiye - 1000;
+			bakiye = bakiye - 1000;
 			printf("BMW hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 		}else{
 			printf("Yetersiz bakiye! ");
 		}
 		break;
 	case 'H':
 		if(bakiye >= 800){
-			kalan = bakiye - 800;
+			bakiye = bakiye - 800;
 			printf("Honda hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 		}else{
 			printf("Yetersiz bakiye! ");
 		}
 		break;
 	case 'h':
 		if(bakiye >= 800){
-			kalan = bakiye - 800;
+			bakiye = bakiye - 800;
 			printf("Honda hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 		}else{
 			printf("Yetersiz bakiye! ");
 		}
 		break;
 	case 'T':
 		if(bakiye >= 600){
-			kalan = bakiye - 600;
+			bakiye = bakiye - 600;
 			printf("Toyota hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 		}else{
 			printf("Yetersiz bakiye! ");
 		}
 		break;
 	case 't':
 		if(bakiye >= 600){
-			kalan = bakiye - 600;
+			bakiye = bakiye - 600;
 			printf("Toyota hayirli olsun!\n");
-			printf("Kalan bakiye %d TL",kalan);
+			printf("Kalan bakiye %d TL\n",bakiye);
 		}else{
 			printf("Yetersiz bakiye! ");
 		}
 		break;
 	case 'C':
-		printf("Gule gule!");
+		printf("Gule gule!\n");
 		exit(0);
 	case 'c':
-		printf("Gule gule!");
+		printf("Gule gule!\n");
 		exit(0);
 	default:
-		printf("Yanlis komut!");
+		printf("Yanlis komut!\n");
 		break;
 	}
+	} while (kalan > 0);
+	
+	
 	
 	
 	
